@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int quantity;
+    float price_per_unit;
+    scanf("%d", &quantity);
+    scanf("%f", &price_per_unit);
+    
+    float total_amount = quantity * price_per_unit;
+    float discount = 0.0;
+
+    if (quantity > 200) {
+        discount = total_amount * 0.20;
+    }
+    
+    float amount_after_discount = total_amount - discount;
+    
+    float gst = amount_after_discount * 0.18;
+    
+    float net_amount_payable = amount_after_discount + gst;
+
+    printf("Quantity Ordered %d\n", quantity);
+    printf("Price per item is Rs.%.2f\n", price_per_unit);
+    printf("Total Amount = Rs.%.2f\n", total_amount);
+    printf("GST - Rs.%.2f\n", gst);
+    printf("Net Amount Payable is Rs.%.2f\n", net_amount_payable);
+    
+    return 0;
+}
