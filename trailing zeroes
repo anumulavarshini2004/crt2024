@@ -1,0 +1,24 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int countTrailingZeros(int num) {
+    int count = 0;
+    for (int i = 5; num / i >= 1; i *= 5) {
+        count += num / i;
+    }
+    return count;
+}
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    int result = countTrailingZeros(num);
+    printf("%d\n", result);
+
+    return 0;
+}
