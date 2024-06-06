@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a;
+    scanf("%d",&a);
+    int nearest_multiple = (int)round(a / 10.0) * 10;
+    printf("%d\n", nearest_multiple);
+    
+    return 0;
+}
