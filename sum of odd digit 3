@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int calculateDiscount(int billAmount) {
+    int discount = 0;
+    int digit;
+    
+    
+    while (billAmount > 0) {
+        digit = billAmount % 10; 
+        if (digit % 2 != 0) { 
+            discount += digit; 
+        }
+        billAmount /= 10; 
+    }
+    
+    return discount;
+}
+
+int main() {
+    int billAmount;
+    
+
+    scanf("%d", &billAmount);
+    
+    int discount = calculateDiscount(billAmount);
+    printf("%d\n", discount);
+    
+    return 0;
+}
