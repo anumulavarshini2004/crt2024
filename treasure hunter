@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+int totalGoldCoins, benSharePercentage, blackbeardSharePercentage;
+    int benShare, blackbeardShare, otherPiratesShare;
+
+    scanf("%d%d%d", &totalGoldCoins, &benSharePercentage, &blackbeardSharePercentage);
+
+    benShare = (benSharePercentage * totalGoldCoins) / 100;
+
+    int remainingGoldCoins = totalGoldCoins - benShare;
+    blackbeardShare = (blackbeardSharePercentage * remainingGoldCoins) / 100;
+
+    int remainingAfterBlackbeard = remainingGoldCoins - blackbeardShare;
+    otherPiratesShare = remainingAfterBlackbeard / 3;
+
+    printf("%d\n%d\n%d",benShare,blackbeardShare,otherPiratesShare);
+
+    return 0;
+}
+
+
+
