@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int d,m,y,s;
+    
+    scanf("%d%d%d%d",&d,&m,&y,&s);
+    int sum = d + m + y;
+    
+    int isDivisibleBy12 = (sum % 12 == 0);
+    
+    int isStudentsInRange = (s > 50 && s< 100);
+    if (isDivisibleBy12 && isStudentsInRange) {
+        printf("Cinema Day\n");
+    } else {
+        printf("Not a Cinema Day\n");
+    }
+    
+    return 0;
+}
