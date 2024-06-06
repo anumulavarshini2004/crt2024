@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+void transformToken(char *token) {
+    for (int i=0; i < strlen(token);i++) {
+        if ((token[i] -'0') % 2 == 0) {
+           //even digit 
+            token[i]=(token[i] - '0' + 1) + '0';
+        } else {
+           //odd digit
+            token[i] = (token[i] - '0' - 1) + '0';
+        }
+    }
+}
+
+int main() {
+    char applicantID[11]; // The maximum length of integer 10^7 is 10 digits + 1 for null terminator
+    scanf("%s", applicantID);
+    
+    transformToken(applicantID);
+    
+    printf("%s\n", applicantID);
+    return 0;
+}
