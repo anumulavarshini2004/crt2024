@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+ int x, a, b;
+    int sellingPrice, costPerCopy, fixedCost, profit;
+    
+    scanf("%d %d %d", &x, &a, &b);
+
+    sellingPrice = x * a;
+    costPerCopy = x * b;
+    fixedCost = 100;
+
+    profit = sellingPrice - costPerCopy - fixedCost;
+
+    printf("%d", profit);
+
+    return 0;
+}
+ 
+    
