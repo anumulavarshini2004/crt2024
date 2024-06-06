@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int userpoints;
+    scanf("%d",&userpoints);
+    if(userpoints>=30 && userpoints<=50)
+    {
+        printf("Average");
+    }
+    else if(userpoints>=51 && userpoints<=60){
+        printf("Good");
+    }
+    else if(userpoints>=61 && userpoints<=80){
+        printf("Excellent");
+    }
+    else if(userpoints>=81 && userpoints<=100){
+        printf("Outstanding");
+    }
+        
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
