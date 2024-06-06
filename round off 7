@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float num;
+    int original, highest, lowest;
+
+    scanf("%f", &num);
+
+    original = (int)num;
+
+    highest = (int)ceil(num);
+
+    lowest = (int)floor(num);
+
+    printf("%d\n%d.0\n%d.0", original, highest, lowest);
+
+    return 0;
+}
+
+  
+
